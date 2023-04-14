@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+}
+
+.notes {
+  width: 20%;
+  min-height: 80vh;
+  border: 1px solid red;
+}
+
+.writing_pad {
+  width: 80%;
+}
