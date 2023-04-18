@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { NgbDateStruct, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -6,27 +6,12 @@ import { NgbDateStruct, NgbModal } from '@ng-bootstrap/ng-bootstrap';
   templateUrl: './note-area.component.html',
   styleUrls: ['./note-area.component.css']
 })
-export class NoteAreaComponent implements OnInit {
+export class NoteAreaComponent {
+  constructor() {}
+  inputValue:string = ''
+  @Output() onAddText = new EventEmitter<string>();
 
-  model!: NgbDateStruct;
-
-  constructor(
-    private modalService: NgbModal
-  ) {
-    this.modalService.activeInstances.subscribe((list) => {
-      this.modalsNumber = list.length;
-    })}
-
-    ngOnInit(): void {
-    throw new Error('Method not implemented.');
+  onAdd(){
+    this.onAddText.emit(this.inputValue)
   }
-;
-
-
-openTruckModal(truckModal:any) {
-    this.modalService.open(truckModal, { size: 'lg' });
-  }
-
-  modalsNumber = 0;
-
 }

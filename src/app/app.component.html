@@ -1,5 +1,11 @@
 <app-header></app-header>
 <div class="container">
   <app-notes class="notes"></app-notes>
-  <app-note-area class="writing_pad"></app-note-area>
+  <div class="writing_pad">
+    <app-note-area (onAddText)="addtext($event)"></app-note-area>
+    <app-text-area></app-text-area>
+  </div>
+  <!-- <app-button (onClick)="addUser()" title="Add"></app-button>
+
+  <app-button (onClick)="postComment()" title="Post"></app-button> -->
 </div>

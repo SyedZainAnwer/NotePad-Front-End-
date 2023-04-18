@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { NotesComponent } from './left-sidebar/notes/notes.component';
 import { HeaderComponent } from './nav/header/header.component';
 import { NoteAreaComponent } from './writing-pad/note-area/note-area.component';
+import { TextAreaComponent } from './writing-pad/text-area/text-area.component';
+import { ButtonComponent } from './button/button.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -13,10 +16,13 @@ import { NoteAreaComponent } from './writing-pad/note-area/note-area.component';
     NotesComponent,
     HeaderComponent,
     NoteAreaComponent,
+    TextAreaComponent,
+    ButtonComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'notepad';
+  text = '';
+
+  // addUser(){
+  //   console.log('user added')
+  // }
+
+  // postComment(){
+  //   console.log('comment posted')
+  // }
+  addtext(value:string){
+    this.text = value
+  }
 }
