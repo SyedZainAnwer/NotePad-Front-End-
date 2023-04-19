@@ -4,10 +4,6 @@
   </div>
   <div class="make_new_note">
     <input class="form-control" [(ngModel)]="inputValue" placeholder="Title" type="text" />
-    <button (click)="onAdd()">Add</button>
+    <button (click)="onAdd()" (onkeyup.enter)="onTextAdd()">Add</button>
   </div>
-
-  <ng-template #truckModal let-modal>
-    <p>Hello</p>
-  </ng-template>
 </div>

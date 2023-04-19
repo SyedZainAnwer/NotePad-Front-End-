@@ -3,7 +3,7 @@
   <app-notes class="notes"></app-notes>
   <div class="writing_pad">
     <app-note-area (onAddText)="addtext($event)"></app-note-area>
-    <app-text-area></app-text-area>
+    <app-text-area [value] = 'text' ></app-text-area>
   </div>
   <!-- <app-button (onClick)="addUser()" title="Add"></app-button>
 

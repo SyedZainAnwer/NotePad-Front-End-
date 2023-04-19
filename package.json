@@ -22,7 +22,7 @@
     "@popperjs/core": "^2.11.6",
     "bootstrap": "^5.2.3",
     "mdb-ui-kit": "^6.2.0",
-    "ng-bootstrap-modal": "^1.1.19",
+    "ng-bootstrap-modal": "^0.0.4",
     "ngb-modal": "^2.0.3",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",

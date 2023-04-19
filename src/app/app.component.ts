@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'notepad';
+  // here text == to inputValue from child component (note-area)
   text = '';
 
   // addUser(){

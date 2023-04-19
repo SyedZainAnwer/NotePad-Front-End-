@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-text-area',
@@ -6,11 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./text-area.component.css']
 })
 export class TextAreaComponent {
-  value = '';
 
-  addTitle (value:string){
-    this.value = value
-  }
+  @Input() value = '';
+  // value = '';
+
+  // addTitle (value:string){
+  //   this.value = value
+  // }
 
   name:string = '';
 

@@ -14,4 +14,8 @@ export class NoteAreaComponent {
   onAdd(){
     this.onAddText.emit(this.inputValue)
   }
+
+  onTextAdd() {
+    this.onAddText.emit(this.inputValue)
+  }
 }
