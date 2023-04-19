@@ -1,1 +1,44 @@
-@import '~mdb-ui-kit/css/mdb.min.css';
+.text_area_main {
+  /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  min-height: 70vh;
+  padding-top: 30px;
+}
+
+.text_area_main h4 {
+  width: 70%;
+  display: flex;
+  justify-content: start;
+}
+
+.text_area_main h4 span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.text_area{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text_area textarea {
+  width: 70%;
+}
+
+.text_area_btn {
+  width: 85%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.text_area_btn button{
+  padding: 10px 30px 10px 30px;
+  margin-left: 10px;
+}

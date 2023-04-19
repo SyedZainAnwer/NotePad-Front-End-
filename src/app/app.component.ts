@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,18 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
   title = 'notepad';
   // here text == to inputValue from child component (note-area)
-  text = '';
+   noteList = {
+    "text" : '',
+    "textNote" : '',
+  }
 
-  // addUser(){
-  //   console.log('user added')
-  // }
 
-  // postComment(){
-  //   console.log('comment posted')
-  // }
-  addtext(value:string){
-    this.text = value
+  addTitleText(value:string){
+    this.noteList.text = value
+  }
+
+  addNoteText(value:string, note:string) {
+    this.noteList.text = value;
+    this.noteList.textNote = note;
   }
 }

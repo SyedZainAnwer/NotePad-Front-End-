@@ -1,10 +1,9 @@
 import { Component, Output, EventEmitter } from '@angular/core';
-import { NgbDateStruct, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-note-area',
   templateUrl: './note-area.component.html',
-  styleUrls: ['./note-area.component.css']
+  styleUrls: ['./note-area.component.css'],
 })
 export class NoteAreaComponent {
   constructor() {}
@@ -12,7 +11,8 @@ export class NoteAreaComponent {
   @Output() onAddText = new EventEmitter<string>();
 
   onAdd(){
-    this.onAddText.emit(this.inputValue)
+    this.onAddText.emit(this.inputValue);
+    this.inputValue = '';
   }
 
   onTextAdd() {

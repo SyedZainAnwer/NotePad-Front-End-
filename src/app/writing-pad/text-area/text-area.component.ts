@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-text-area',
@@ -7,14 +7,20 @@ import { Component, Input } from '@angular/core';
 })
 export class TextAreaComponent {
 
+  @Output() onSubmitText = new EventEmitter<string>();
   @Input() value = '';
-  // value = '';
-
-  // addTitle (value:string){
-  //   this.value = value
-  // }
+  textField:string = '';
 
   name:string = '';
 
   title:string = "Title";
+
+  handleClear(){
+    this.value = '';
+    this.textField = '';
+  }
+
+  handleSubmit(){
+    this.onSubmitText.emit(this.textField);
+  }
 }

@@ -1,11 +1,19 @@
+.pad_main {
+  /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  min-height: 15vh;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
 .pad_header {
-  width: 80%;
+  width: 100%;
   display: flex;
   justify-content: center;
 }
 
 .make_new_note {
-  width: 80%;
+  width: 100%;
   display: flex;
   justify-content: center;
 }
@@ -13,4 +21,22 @@
 .make_new_note input {
   padding: 10px 20px 10px 20px;
   font-size: 17px;
+  margin-right: 10px;
+  width: 50%;
+  margin-bottom: 15px;
+}
+
+.add_btn {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.add_btn button {
+  padding: 10px 30px 10px 30px;
+}
+
+.pad_header {
+  margin-bottom: 10px;
+  padding-top: 10px;
 }

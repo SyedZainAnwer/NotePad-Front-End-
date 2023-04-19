@@ -1,9 +1,19 @@
 <div class="pad_main">
   <div class="pad_header">
-    <h1>Write Your Note Here</h1>
+    <h3>Add title to your note</h3>
   </div>
   <div class="make_new_note">
-    <input class="form-control" [(ngModel)]="inputValue" placeholder="Title" type="text" />
-    <button (click)="onAdd()" (onkeyup.enter)="onTextAdd()">Add</button>
+    <input
+      class="form-control form-control-lg"
+      [(ngModel)]="inputValue"
+      (onkeyup.enter)="onTextAdd()"
+      placeholder="Add Title"
+      type="text"
+    />
+    <div class="add_btn">
+      <button type="button" (click)="onAdd()" class="btn btn-outline-primary">
+        Add
+      </button>
+    </div>
   </div>
 </div>

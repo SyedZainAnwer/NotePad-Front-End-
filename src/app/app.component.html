@@ -1,9 +1,18 @@
 <app-header></app-header>
-<div class="container">
-  <app-notes class="notes"></app-notes>
+<div class="main_container">
+  <app-notes
+    class="notes"
+    [value]= "this.noteList.text"
+    [note]= "this.noteList.textNote"
+
+  ></app-notes>
   <div class="writing_pad">
-    <app-note-area (onAddText)="addtext($event)"></app-note-area>
-    <app-text-area [value] = 'text' ></app-text-area>
+    <div class="add_newtitle">
+      <app-note-area (onAddText)="addTitleText($event)"></app-note-area>
+    </div>
+    <div class="add_new_note">
+      <app-text-area [value]="this.noteList.text"></app-text-area>
+    </div>
   </div>
   <!-- <app-button (onClick)="addUser()" title="Add"></app-button>
 

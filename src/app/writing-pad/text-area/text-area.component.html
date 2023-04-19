@@ -1,3 +1,21 @@
+<div class="text_area_main">
+  <div class="text_area">
+    <h4>
+      {{ title }} : <span>{{ value }}</span>
+    </h4>
 
-<h1>{{ title }} : {{ value }}</h1>
-<textarea name="Add A Note" id="" cols="30" rows="10"></textarea>
+    <textarea
+      #messageInput
+      class="form-control form-control-flush mb-3 form-control-md form-control-solid"
+      rows="10"
+      data-kt-element="input"
+      placeholder="Start making notes"
+      [(ngModel)] = "textField"
+    ></textarea>
+  </div>
+
+  <div class="text_area_btn">
+    <button type="button" class="btn btn-outline-danger" (click)="handleClear()">Delete</button>
+    <button type="button" class="btn btn-outline-success" (click)="handleSubmit()">Submit</button>
+  </div>
+</div>
