@@ -19,8 +19,8 @@ export class AppComponent {
     this.noteList.text = value
   }
 
-  addNoteText(value:string, note:string) {
-    this.noteList.text = value;
-    this.noteList.textNote = note;
+  addNoteText(sideBarTitleValue:string) {
+    this.noteList.text = sideBarTitleValue;
+    // this.noteList.textNote = note;
   }
 }

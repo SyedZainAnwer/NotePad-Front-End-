@@ -9,11 +9,13 @@ export class TextAreaComponent {
 
   @Output() onSubmitText = new EventEmitter<string>();
   @Input() value = '';
+
+  sideBarTitleValue = '';
   textField:string = '';
 
   name:string = '';
 
-  title:string = "Title";
+  // title:string = "Title";
 
   handleClear(){
     this.value = '';
@@ -22,5 +24,6 @@ export class TextAreaComponent {
 
   handleSubmit(){
     this.onSubmitText.emit(this.textField);
+    this.onSubmitText.emit(this.sideBarTitleValue);
   }
 }

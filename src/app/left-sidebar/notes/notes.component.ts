@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./notes.component.css']
 })
 export class NotesComponent {
-  @Input() value = '';
+  @Input() sideBarTitleValue = '';
   @Input() note = '';
 
 }
