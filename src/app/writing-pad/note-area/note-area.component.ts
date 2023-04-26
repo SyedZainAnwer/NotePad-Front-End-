@@ -7,7 +7,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
 })
 export class NoteAreaComponent {
   constructor() {}
-  inputValue:string = ''
+  inputValue:string = '';
   @Output() onAddText = new EventEmitter<string>();
 
   onAdd(){

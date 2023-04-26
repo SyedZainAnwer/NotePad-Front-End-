@@ -7,23 +7,24 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class TextAreaComponent {
 
-  @Output() onSubmitText = new EventEmitter<string>();
+  @Output() onSubmitNewText = new EventEmitter<string>();
   @Input() value = '';
 
-  sideBarTitleValue = '';
+  sideBarTitleValue:string = '';
   textField:string = '';
 
   name:string = '';
 
   // title:string = "Title";
 
+
+  handleSubmit(){
+    this.onSubmitNewText.emit(this.textField);
+    // this.onSubmitNewText.emit(this.sideBarTitleValue);
+  }
+
   handleClear(){
     this.value = '';
     this.textField = '';
-  }
-
-  handleSubmit(){
-    this.onSubmitText.emit(this.textField);
-    this.onSubmitText.emit(this.sideBarTitleValue);
   }
 }

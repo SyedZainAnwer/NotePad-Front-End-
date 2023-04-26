@@ -5,22 +5,37 @@ import { Component, Input } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
+interface ITEM {
+  title:string,
+  descrip:string
+}
 export class AppComponent {
 
-  title = 'notepad';
   // here text == to inputValue from child component (note-area)
    noteList = {
     "text" : '',
     "textNote" : '',
+    "leftTitle" : '',
   }
 
+  notes: ITEM[] = []
+
+  title = ''
 
   addTitleText(value:string){
-    this.noteList.text = value
+    this.title = value
   }
 
-  addNoteText(sideBarTitleValue:string) {
-    this.noteList.text = sideBarTitleValue;
-    // this.noteList.textNote = note;
+  addNoteText(note:string) {
+    this.noteList.text = this.title;
+    this.noteList.textNote = note;
+    // console.log(this.title);
+    // console.log(note);
+    const item:ITEM = {
+      title: this.title,
+      descrip: note,
+    }
+    this.notes.push(item)
   }
 }

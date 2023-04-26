@@ -3,14 +3,15 @@
   <app-notes
     class="notes"
     [note]= "this.noteList.textNote"
-    [sideBarTitleValue]= "this.noteList.text"
+    [value]= "this.noteList.text"
+
   ></app-notes>
   <div class="writing_pad">
     <div class="add_newtitle">
       <app-note-area (onAddText)="addTitleText($event)"></app-note-area>
     </div>
     <div class="add_new_note">
-      <app-text-area [value]="this.noteList.text"></app-text-area>
+      <app-text-area (onSubmitNewText)="addNoteText($event)" [value]="this.title"></app-text-area>
     </div>
   </div>
   <!-- <app-button (onClick)="addUser()" title="Add"></app-button>
